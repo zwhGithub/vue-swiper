@@ -2,8 +2,7 @@
 - 基于Vue2.0开发，基本满足大部分功能
 - 轻量、高性能轮播插件。目前支持  无缝衔接自动轮播、无限轮播、手势轮播
 
-
-## Install
+##Install
 
 ```
 npm i vue-swiper-component --save
