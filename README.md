@@ -49,7 +49,8 @@ components: {
     //加一些参数配置情况
   <Swiper v-if="slidesReal.length > 0"
   		  :autoPlay='true' //是否自动轮播
-          @transtionend='move' //每次轮播之后调用的方法，参数是跳到第几个轮播图
+       @transtionend='move' 
+       //每次轮播之后调用的方法，参数是跳到第几个轮播图
   		  :showIndicator='true' //是否显示轮播的那个点
   		  interval="2500" //每两次隔多久滚动一次
   		  duration="500"  //每次滚动一页需要多久时间
