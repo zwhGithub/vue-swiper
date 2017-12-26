@@ -2,7 +2,8 @@
 - 基于Vue2.0开发，基本满足大部分功能
 - 轻量、高性能轮播插件。目前支持  无缝衔接自动轮播、无限轮播、手势轮播
 
-##Install
+
+## Install
 
 ```
 npm i vue-swiper-component --save
@@ -11,7 +12,7 @@ cnpm i vue-swiper-component --save  //国内镜像
 
 ## demo
 
- ![效果](https://zwhgithub.github.io/vue-calendar/dist/1514288258.png)
+ ![效果](https://zwhgithub.github.io/vue-swiper/dist/1514288258.png)
 
 ## Usage
 
