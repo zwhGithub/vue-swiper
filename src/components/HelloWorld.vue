@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
-    <Swiper v-if="list.length>0">
-      <Slide v-for="(tag,key) in list" :key=key>
-        <img :src=tag />
-      </Slide>
-    </Swiper>
-  </div>
+    <div class="hello">
+        <Swiper v-if="list.length>0">
+            <Slide v-for="(tag,key) in list" :key=key>
+                <img :src=tag />
+            </Slide>
+        </Swiper>
+    </div>
 </template>
 
 <script>
-// import { Swiper, Slide } from 'vue-swiper-component';
-import { Swiper, Slide } from './index.js';
+import { Swiper, Slide } from 'vue-swiper-component';
+// import { Swiper, Slide } from './index.js';
 // import Swiper from './swiper';
 // import Slide from './slide';
 export default {
