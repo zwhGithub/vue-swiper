@@ -11,7 +11,7 @@ cnpm i vue-swiper-component --save  //国内镜像
 
 ## demo
 
- ![效果](https://)
+ ![效果](https://zwhgithub.github.io/vue-calendar/dist/1514288258.png)
 
 ## Usage
 
