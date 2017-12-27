@@ -8,6 +8,8 @@
 ## demo
 
  ![效果](http://zwhgithub.github.io/vue-swiper/dist/1514291260.png)
+ 
+ - 如果觉得好用，给一个star哦~~~
 
 ## Install
 
