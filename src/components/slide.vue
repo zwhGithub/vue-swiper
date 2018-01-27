@@ -16,8 +16,8 @@
 export default {
     methods: {
         clickSlide() {
-            this.$emit('click');
+            this.$emit('click')
         }
     }
-};
+}
 </script>

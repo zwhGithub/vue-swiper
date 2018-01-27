@@ -1,1 +1,0 @@
-{"version":3,"sources":["app.8bd1065bb36651d8de563ff07b6a9da2.css"],"names":[],"mappings":"AACA,EACI,UAAW,AACX,QAAU,CACb,AAED,qBACE,UAAY,CACb","file":"app.8bd1065bb36651d8de563ff07b6a9da2.css","sourcesContent":["\n* {\n    padding: 0;\n    margin: 0;\n}\n\nimg[data-v-50d20a86] {\n  width: 100%;\n}\n"]}
