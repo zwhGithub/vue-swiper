@@ -12,7 +12,7 @@
 
 ## Install
 
-```
+``` javascript
 npm i vue-swiper-component --save
 cnpm i vue-swiper-component --save  //国内镜像
 ```
@@ -64,7 +64,7 @@ components: {
 | interval      | 每两次隔多久滚动一次     | 2500 |
 | duration      | 每次滚动一页需要多久时间 | 500  |
 
-```
+``` javascript
 ✅  Swiper 上面还暴露了其他方法,在 Swiper 标签上添加 ref 属性, 例如: <Swiper ref="swiper"></Swiper>
 
     ✅  this.$refs.swiper.prevSlide(); // 上一张图
