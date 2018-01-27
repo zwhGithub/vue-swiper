@@ -8,7 +8,7 @@
 
 ![效果](http://zwhgithub.github.io/vue-swiper/dist/1514291260.png)
 
-* 如果觉得好用，给一个 star 哦~~~
+* 🎉🎉🎉如果觉得好用，给一个 star 哦~~~ 🎉🎉🎉
 
 ## Install
 
@@ -65,11 +65,11 @@ components: {
 | duration      | 每次滚动一页需要多久时间 | 500  |
 
 ```
-* Swiper 上面还暴露了其他方法,在 Swiper 标签上添加 ref 属性, 例如: <Swiper ref="swiper"></Swiper>
+✅  Swiper 上面还暴露了其他方法,在 Swiper 标签上添加 ref 属性, 例如: <Swiper ref="swiper"></Swiper>
 
-    * this.$refs.swiper.prevSlide(); // 下一张图
-    * this.$refs.swiper.nextSlide(); // 上一张图
-    * this.$refs.swiper.slideTo(2); //某一张图
+    ✅  this.$refs.swiper.prevSlide(); // 上一张图
+    ✅  this.$refs.swiper.nextSlide(); // 下一张图
+    ✅  this.$refs.swiper.slideTo(2); //某一张图
 ```
 ## 事件
 
