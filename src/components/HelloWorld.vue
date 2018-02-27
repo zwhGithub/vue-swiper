@@ -5,6 +5,14 @@
                 <img :src="tag.img" />
             </Slide>
         </Swiper>
+
+        <div style="width:80%;">
+            <Swiper ref="swiper" v-if="list.length>0">
+                <Slide v-for="(tag,key) in list" :key=key>
+                    <img :src="tag.img" />
+                </Slide>
+            </Swiper>
+        </div>
         <!-- <div class="button button2" @click="prevSlideClick">上一张</div>
         <div class="button" @click="nextSlideClick">下一张</div>
         <div class="button" @click="slideToClick">跳到第三张</div> -->
@@ -12,8 +20,8 @@
 </template>
 
 <script>
-    // import { Swiper, Slide } from 'vue-swiper-component'
-    import { Swiper, Slide } from './index.js'
+    import { Swiper, Slide } from 'vue-swiper-component'
+    // import { Swiper, Slide } from './index.js'
     export default {
         data() {
             return {
