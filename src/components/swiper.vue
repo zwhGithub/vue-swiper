@@ -152,7 +152,6 @@
                 this.slidesLength = SlideDom.length
                 var cloneDom1 = SlideDom[0].cloneNode(true) //向最后append
                 var cloneDom2 = SlideDom[this.slidesLength - 1].cloneNode(true) //向最前append
-                console.log(document.querySelector('.' + this.className))
                 document.querySelector('.' + this.className).insertBefore(cloneDom2, SlideDom[0])
                 document.querySelector('.' + this.className).appendChild(cloneDom1)
                 this._width = document.querySelector('.' + this.className).offsetWidth
