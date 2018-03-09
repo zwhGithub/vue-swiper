@@ -75,8 +75,8 @@ components: {
 ## 事件
 
 ```
-transtionend 事件  每次轮播出发 参数表示轮播到第几个图片
-// @transtionend="getNum"    getNum(data) {console.log(data);}
+transtionend 事件  每次轮播出发 参数表示轮播到第几个图片 在Swiper上添加
+// @transtionend="getNum"    getNum(data) {console.log(data);}
 click  事件 每个轮播图上的事件
 ```
 
