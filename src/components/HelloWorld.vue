@@ -1,18 +1,10 @@
 <template>
     <div class="hello">
         <Swiper ref="swiper" v-if="list.length>0">
-            <Slide v-for="(tag,key) in list" :key=key>
-                <img :src="tag.img" />
+            <Slide v-for="(item,index) in list" :key=index>
+                <img :src="item.img" />
             </Slide>
         </Swiper>
-
-        <div style="width:80%;">
-            <Swiper ref="swiper" v-if="list.length>0">
-                <Slide v-for="(tag,key) in list" :key=key>
-                    <img :src="tag.img" />
-                </Slide>
-            </Swiper>
-        </div>
         <!-- <div class="button button2" @click="prevSlideClick">上一张</div>
         <div class="button" @click="nextSlideClick">下一张</div>
         <div class="button" @click="slideToClick">跳到第三张</div> -->
