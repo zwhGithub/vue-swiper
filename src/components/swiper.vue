@@ -53,6 +53,8 @@
                 //克隆dom
                 this.starDom()
                 this.dom.transform = `translate3d(${this._width * -1}px, 0px, 0px)`
+                this.dom['-webkit-transform'] = `translate3d(${this._width * -1}px, 0px, 0px)`
+                this.dom['-ms-transform'] = `translate3d(${this._width * -1}px, 0px, 0px)`
                 if (this.autoPlay) {
                     this.setTime()
                 }
@@ -87,9 +89,11 @@
             },
             setTransform(num) {
                 this.dom.transform = `translate3d(${num}px, 0px, 0px)`
+                this.dom['-webkit-transform'] = `translate3d(${num}px, 0px, 0px)`
+                this.dom['-ms-transform'] = `translate3d(${num}px, 0px, 0px)`
             },
             getTransform() {
-                var x = this.dom.transform
+                var x = this.dom.transform || this.dom['-webkit-transform'] || this.dom['-ms-transform'];
                 x = x.substring(12)
                 x = x.match(/(\S*)px/)[1]
                 return Number(x)
@@ -176,7 +180,13 @@
     .wh_swiper {
         width: 100%;
         display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
         display: -ms-flexbox;
+        display: flex;
+        -moz-transition-duration: 0s linear;
+        -webkit-transition-duration: 0s linear;
+        -o-transition-duration: 0s linear;
         transition-duration: 0s linear;
     }
 
