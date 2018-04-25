@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <Swiper :autoPlay='false' ref="swiper" v-if="list.length>0">
+        <Swiper ref="swiper" v-if="list.length>0">
             <Slide v-for="(item,index) in list" :key=index>
                 <img :src="item.img" />
             </Slide>
