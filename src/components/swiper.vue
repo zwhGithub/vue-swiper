@@ -72,7 +72,6 @@
             m(x) {
                 if (this.slideing && this.t.s != -1) {
                     this.clearTimeOut()
-                    this.dom = this.dom
                     this.t.m = x.touches[x.touches.length - 1].clientX - this.t.s
                     this.setTransform(this.t.m + this.t.sx)
                 }
@@ -136,6 +135,7 @@
                         this.index = this.slidesLength
                         this.setTransform(this.index * -1 * this._width)
                     }
+                    this.setHeight();
                     this.$emit('transtionend', this.index - 1)
                     this.auto = true
                     this.slideing = true
@@ -151,15 +151,22 @@
                     }
                 }, this.interval)
             },
+            setHeight() {
+                let swiperDom = document.getElementsByClassName(this.className)[0];
+                swiperDom.style.height = swiperDom.getElementsByClassName('wh_slide')[this.index].offsetHeight + 'px';
+            },
             starDom() {
                 var SlideDom = document.querySelector('.' + this.className).getElementsByClassName('wh_slide')
                 this.slidesLength = SlideDom.length
-                var cloneDom1 = SlideDom[0].cloneNode(true) //向最后append
-                var cloneDom2 = SlideDom[this.slidesLength - 1].cloneNode(true) //向最前append
-                document.querySelector('.' + this.className).insertBefore(cloneDom2, SlideDom[0])
-                document.querySelector('.' + this.className).appendChild(cloneDom1)
-                this._width = document.querySelector('.' + this.className).offsetWidth
-                this.dom = document.querySelector('.' + this.className).style
+                if (this.slidesLength > 1) {
+                    var cloneDom1 = SlideDom[0].cloneNode(true) //向最后append
+                    var cloneDom2 = SlideDom[this.slidesLength - 1].cloneNode(true) //向最前append
+                    document.querySelector('.' + this.className).insertBefore(cloneDom2, SlideDom[0])
+                    document.querySelector('.' + this.className).appendChild(cloneDom1)
+                    this.setHeight();
+                    this._width = document.querySelector('.' + this.className).offsetWidth
+                    this.dom = document.querySelector('.' + this.className).style
+                }
             },
             clearTimeOut() {
                 this.auto = false
