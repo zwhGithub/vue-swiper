@@ -33,7 +33,7 @@
         },
         methods: {
             getNum(i) {
-                this.$toast(`当前滑到了第${i}个`, 400);
+                this.$toast(`==当前滑到了第${i}个`, 400);
             },
             prevSlideClick() {
                 this.$refs.swiper.prevSlide()
