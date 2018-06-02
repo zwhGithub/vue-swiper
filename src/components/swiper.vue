@@ -135,7 +135,6 @@
                         this.index = this.slidesLength
                         this.setTransform(this.index * -1 * this._width)
                     }
-                    // this.setHeight();
                     this.$emit('transtionend', this.index - 1)
                     this.auto = true
                     this.slideing = true
@@ -151,10 +150,6 @@
                     }
                 }, this.interval)
             },
-            setHeight() {
-                let swiperDom = document.getElementsByClassName(this.className)[0];
-                swiperDom.style.height = swiperDom.getElementsByClassName('wh_slide')[this.index].offsetHeight + 'px';
-            },
             starDom() {
                 var SlideDom = document.querySelector('.' + this.className).getElementsByClassName('wh_slide')
                 this.slidesLength = SlideDom.length
@@ -165,7 +160,6 @@
                     document.querySelector('.' + this.className).appendChild(cloneDom1)
                     this._width = document.querySelector('.' + this.className).offsetWidth
                     this.dom = document.querySelector('.' + this.className).style
-                    // this.setHeight();
                 }
             },
             clearTimeOut() {
