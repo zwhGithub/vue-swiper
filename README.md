@@ -4,6 +4,8 @@
 *   轻量、高性能轮播插件。目前支持 无缝衔接自动轮播、无限轮播、手势轮播
 *   没有引入第三方库，原生 js 封装,打包之后只有 8.2KB 大小 性能还是杠杠滴
 
+## [github地址](https://github.com/zwhGithub/vue-swiper/)
+
 ## demo
 
 ![效果](http://zwhgithub.github.io/vue-swiper/dist/1514291260.png)
