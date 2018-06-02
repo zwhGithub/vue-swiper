@@ -135,7 +135,7 @@
                         this.index = this.slidesLength
                         this.setTransform(this.index * -1 * this._width)
                     }
-                    this.setHeight();
+                    // this.setHeight();
                     this.$emit('transtionend', this.index - 1)
                     this.auto = true
                     this.slideing = true
@@ -165,7 +165,7 @@
                     document.querySelector('.' + this.className).appendChild(cloneDom1)
                     this._width = document.querySelector('.' + this.className).offsetWidth
                     this.dom = document.querySelector('.' + this.className).style
-                    this.setHeight();
+                    // this.setHeight();
                 }
             },
             clearTimeOut() {
