@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <Swiper ref="swiper" v-if="list.length>0">
+        <Swiper ref="swiper" @transtionend="getNum" v-if="list.length>0">
             <Slide v-for="(item,index) in list" :key=index>
                 <img :src="item.img" />
             </Slide>
@@ -32,6 +32,9 @@
             Slide
         },
         methods: {
+            getNum(i) {
+                this.$toast(`当前滑到了第${i}个`, 400);
+            },
             prevSlideClick() {
                 this.$refs.swiper.prevSlide()
             },
