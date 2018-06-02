@@ -163,9 +163,9 @@
                     var cloneDom2 = SlideDom[this.slidesLength - 1].cloneNode(true) //向最前append
                     document.querySelector('.' + this.className).insertBefore(cloneDom2, SlideDom[0])
                     document.querySelector('.' + this.className).appendChild(cloneDom1)
-                    this.setHeight();
                     this._width = document.querySelector('.' + this.className).offsetWidth
                     this.dom = document.querySelector('.' + this.className).style
+                    this.setHeight();
                 }
             },
             clearTimeOut() {
