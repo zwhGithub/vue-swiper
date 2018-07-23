@@ -15,8 +15,8 @@
 </template>
 
 <script>
-    // import { Swiper, Slide } from 'vue-swiper-component'
-    import { Swiper, Slide } from './index.js'
+    import { Swiper, Slide } from 'vue-swiper-component'
+    // import { Swiper, Slide } from './index.js'
     export default {
         data() {
             return {

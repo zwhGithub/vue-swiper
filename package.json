@@ -15,7 +15,7 @@
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-swiper-component": "^2.1.0",
+    "vue-swiper-component": "^2.1.3",
     "vue-toast-component": "^2.0.0"
   },
   "devDependencies": {
