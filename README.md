@@ -29,7 +29,7 @@ components: {
     Slide
 }
 
-//异步加载轮播图的情况
+//异步加载轮播图的情况;
   <Swiper v-if="list.length > 0">
        <Slide v-for="(item,index) in list" :key="index">
        </Slide>
