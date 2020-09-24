@@ -98,7 +98,7 @@
                 return Number(x)
             },
             fn(e) {
-                e.preventDefault()
+                // e.preventDefault()
             },
             prevSlide() {
                 this.clearTimeOut()
@@ -176,6 +176,7 @@
         z-index: 1;
         overflow: hidden;
         width: 100%;
+        touch-action: pan-y;
     }
 
     .wh_swiper {
