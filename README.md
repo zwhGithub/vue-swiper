@@ -50,7 +50,7 @@ components: {
   </Swiper>
 
     //加一些参数配置情况
-  <Swiper v-if="slidesReal.length > 0" :autoPlay='true' :showIndicator='true' interval="2500" duration="500">
+  <Swiper v-if="slidesReal.length > 0" :autoPlay="true" :showIndicator="true" interval="2500" duration="500">
         <Slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
         	//添加click事件
         </Slide>
@@ -65,6 +65,7 @@ components: {
 | showIndicator | 是否显示轮播的那个点     | true |
 | interval      | 每两次隔多久滚动一次     | 2500 |
 | duration      | 每次滚动一页需要多久时间 | 500  |
+| infinite      | 是否开启无限轮播模式。   | true  |
 
 ```javascript
 ✅  Swiper 上面还暴露了其他方法,在 Swiper 标签上添加 ref 属性, 例如: <Swiper ref="swiper"></Swiper>
