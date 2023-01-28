@@ -45,6 +45,9 @@
             },
             showIndicator: {
                 default: true
+            },
+            infinite: {
+                default: true
             }
         },
         mounted() {
@@ -101,11 +104,17 @@
                 e.preventDefault()
             },
             prevSlide() {
+                if (!this.infinite && this.index === 0) {
+                    return;
+                }
                 this.clearTimeOut()
                 this.index--
                 this.wh()
             },
             nextSlide() {
+                if (!this.infinite && this.index === this.slidesLength - 1) {
+                    return;
+                }
                 this.clearTimeOut()
                 this.index++
                 this.wh()
@@ -154,10 +163,12 @@
                 var SlideDom = document.querySelector('.' + this.className).getElementsByClassName('wh_slide')
                 this.slidesLength = SlideDom.length
                 if (this.slidesLength > 1) {
-                    var cloneDom1 = SlideDom[0].cloneNode(true) //向最后append
-                    var cloneDom2 = SlideDom[this.slidesLength - 1].cloneNode(true) //向最前append
-                    document.querySelector('.' + this.className).insertBefore(cloneDom2, SlideDom[0])
-                    document.querySelector('.' + this.className).appendChild(cloneDom1)
+                    if (this.infinite) {
+                        var cloneDom1 = SlideDom[0].cloneNode(true) //向最后append
+                        var cloneDom2 = SlideDom[this.slidesLength - 1].cloneNode(true) //向最前append
+                        document.querySelector('.' + this.className).insertBefore(cloneDom2, SlideDom[0])
+                        document.querySelector('.' + this.className).appendChild(cloneDom1)
+                    }
                     this._width = document.querySelector('.' + this.className).offsetWidth
                     this.dom = document.querySelector('.' + this.className).style
                 }
